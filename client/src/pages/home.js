@@ -1,12 +1,13 @@
 import React from 'react'
+import { useEffect } from 'react'
 import { useNavigate } from 'react-router-dom'
 
 const Home = (props) => {
-  const { loggedIn, email } = props  //email,loggedIn
+  const { loggedIn, email, setLoggedIn,setEmail } = props  //email,loggedIn
   const navigate = useNavigate()
-
   const onButtonClick = () => {
-    // You'll update this function later
+    localStorage.removeItem('user');
+    navigate('/login');
   }
 
   return (
@@ -20,7 +21,8 @@ const Home = (props) => {
           className={'inputButton'}
           type="button"
           onClick={onButtonClick}
-          value={loggedIn ? 'Log out' : 'Log in'}
+        //   value={loggedIn ? 'Log out' : 'Log in'}
+          value={'Log out'}
         />
         {loggedIn ? <div>Your email address is {email}</div> : <div />}
       </div>

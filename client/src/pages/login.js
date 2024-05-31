@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 
 const Login = (props) => {
@@ -33,8 +33,33 @@ const Login = (props) => {
     setPasswordError('The password must be 8 characters or longer')
     return
   }
+
+  logIn();
   }
 
+
+  
+  // Log in a user using email and password
+  const logIn = () => {
+    fetch('http://localhost:3080/auth', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({ email, password }),
+    })
+      .then((r) => r.json())
+      .then((r) => {
+        if ('success' === r.message) {
+          localStorage.setItem('user', JSON.stringify({ email, token: r.token }))
+          props.setLoggedIn(true)
+          props.setEmail(email)
+          navigate('/home')
+        } else {
+          window.alert('Wrong email or password')
+        }
+      })
+  }
   return (
     <div className={'mainContainer'}>
       <div className={'titleContainer'}>
