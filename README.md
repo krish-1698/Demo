@@ -3,7 +3,9 @@
 ![alt text](image.png)
 
 ## Built With
-[![React][React.js]][React-url][![JWT][JWT]][JWT-url][![Bootstrap][Bootstrap-css]][Bootstrap-url]
+[![React][React.js]][React-url]
+[![JWT][JWT]][JWT-url]
+[![Bootstrap][Bootstrap-css]][Bootstrap-url]
 [![React Toastify][Toastify]][Toastify-url]
 ## Getting Started 🎉
 To get a local copy up and running on your machine, follow these simple steps.
@@ -30,7 +32,7 @@ To get a local copy up and running on your machine, follow these simple steps.
     node server.js
     ```
 ### Login Credentials
- Username - krish
+ Username - krish<br>
  Password - 12345
 
  <!-- BUILD WITH URLs -->
