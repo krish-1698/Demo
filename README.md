@@ -19,17 +19,16 @@ To get a local copy up and running on your machine, follow these simple steps.
    ```
 3.  Create .env file with keys
 4.  Run the application
-    ### `Front End`
-    -Open an intergrated terminal in client folder
-   ```sh
-   npm start
-   ```
-    ### `Backend`
-    -Open an integrated terminal in server folder
+    ### Front End
+    - Open an intergrated terminal in client folder
     ```sh
-   node server.js
-   ```
-
+    npm start
+    ```
+    ### Backend
+    - Open an integrated terminal in server folder
+    ```sh
+    node server.js
+    ```
 ### Login Credentials
  Username - krish
  Password - 12345
